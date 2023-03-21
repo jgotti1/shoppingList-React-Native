@@ -1,5 +1,7 @@
 import { StyleSheet } from "react-native";
 
+
+
 const styles = StyleSheet.create({
   appContainer: {
     flex: 1,
@@ -12,6 +14,12 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginBottom: 5
   },
+  versionText: {
+    fontSize: 10,
+    marginLeft: 6,
+    marginTop: 3,
+},
+
   inputContainer: {
     backgroundColor:"#c0cfdb",
     flex: 1,
@@ -19,7 +27,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     marginBottom: 1,
-    marginTop: 10,
+    marginTop: 7,
     borderWidth: 1,
     borderColor: "#f3f3f3",
     borderRadius: 20,
@@ -33,7 +41,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#6bb1da",
-    marginTop: 111,
     margin: 11,
     maxHeight: 200,
     borderWidth: 1,
@@ -56,21 +63,59 @@ const styles = StyleSheet.create({
    
   },
   itemsContainer: {
-    marginTop: 5,
-    flex: 5,
+    marginTop: 3,
+   flex: 5,
   },
   item: {
-    margin: 8,
-    borderRadius: 6,
+    margin: 3,
+    borderRadius: 9,
     backgroundColor: "#437394",
     borderWidth: .8,
-    borderColor: "white"
+    borderColor: "white",
+    opacity: .9,
+    shadowOffset: { width: 0, height: 6 },
+      shadowColor: "black",
+      shadowRadius: 5,
+      shadowOpacity: 0.2,
   },
   
   itemText: {
     padding: 12,
     color: "white",
+    fontSize: 18,
+    fontWeight: "bold",
   },
+
+  itemTextChecked: {
+    color: "#a8a5a5",
+    fontWeight: "normal",
+    padding: 12,
+    fontSize:18,
+    textDecorationLine: "line-through",
+    textDecorationColor: "black",
+
+  },
+  itemRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginLeft: 8,
+},
+
+  deleteContainer: {
+    flex: 1,
+    alignItems: "flex-end",
+  
+ 
+  },
+
+  deleteItem: {
+    fontWeight: "bold",
+    color: "red",
+    fontSize: 35,
+    marginRight: 18,
+   
+  },
+
   button: {
     borderRadius: 10,
     width: 120,
@@ -110,7 +155,9 @@ const styles = StyleSheet.create({
   },
    modal: {
     flex: 1,
-    resizeMode: 'cover',
+     resizeMode: 'cover',
+     justifyContent: "center",
+    
   },
    
   buttonModalContainer: {

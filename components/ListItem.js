@@ -1,15 +1,32 @@
+import {useState} from "react"
 import { View, Text, Pressable} from "react-native";
 import styles from "../styles";
+import { Checkbox} from "native-base";
 
 function ListItem({ handleDeleteItem, data }) {
-  
+
+  const [isChecked, setIsChecked] = useState(false)
+
+  const handleIsChecked = () => {
+  setIsChecked(!isChecked)
+}
+ 
   return (
-    
+   
+
     <View style={styles.item}>
-      <Pressable style={({pressed})=> pressed && styles.pressItem} onPress={handleDeleteItem.bind(this, data.key)}>
-      <Text style={styles.itemText}>{data.text}</Text>
-    </Pressable>
+      {/* <Pressable style={({ pressed }) => pressed && styles.pressItem} onPress={handleDeleteItem.bind(this, data.key)}> */}
+        <View style={styles.itemRow}>
+        <Checkbox size="md" accessibilityLabel="checked off listm" onChange={handleIsChecked}>
+          <Text style={!isChecked ? styles.itemText : styles.itemTextChecked}>{data.text}</Text>
+        </Checkbox>
+          <View style={styles.deleteContainer}>
+          <Pressable onPress={handleDeleteItem.bind(this, data.key)}><Text style={styles.deleteItem}>-</Text></Pressable>
+          </View>
+        </View> 
+      {/* </Pressable> */}
     </View>
+   
     
   );
 }
