@@ -17,7 +17,7 @@ function ListItem({ handleDeleteItem, data }) {
     <View style={styles.item}>
       {/* <Pressable style={({ pressed }) => pressed && styles.pressItem} onPress={handleDeleteItem.bind(this, data.key)}> */}
         <View style={styles.itemRow}>
-        <Checkbox size="md" accessibilityLabel="checked off listm" onChange={handleIsChecked}>
+        <Checkbox size="md" accessibilityLabel="checked off list" onChange={handleIsChecked}>
           <Text style={!isChecked ? styles.itemText : styles.itemTextChecked}>{data.text}</Text>
         </Checkbox>
           <View style={styles.deleteContainer}>
