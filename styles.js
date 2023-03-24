@@ -14,11 +14,32 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginBottom: 5
   },
+ 
+  topContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal:12,
+    // paddingVertical: 10,
+  },
+
   versionText: {
     fontSize: 10,
-    marginLeft: 6,
-    marginTop: 3,
-},
+   color: '#323232',
+  },
+
+  copyright: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  
+  linkText: {
+    fontSize: 9,
+    color: '#323232',
+    marginLeft: 5,
+  },
+
+
 
   inputContainer: {
     backgroundColor:"#c0cfdb",
@@ -113,14 +134,7 @@ const styles = StyleSheet.create({
     marginRight: 18,
   },
 
-  // deleteTextContainer: {
-  // borderWidth: 3,
-  //   borderColor: "red",
-  //   margin: 6,
-  //   borderRadius: 50,
-  //   height: 40,
 
-  // },
 
   button: {
     borderRadius: 10,

@@ -1,5 +1,5 @@
 import {useEffect} from "react"
-import { View, TextInput, FlatList, ImageBackground, Alert, Text  } from "react-native";
+import { View, TextInput, FlatList, ImageBackground, Alert, Text, TouchableOpacity, Linking  } from "react-native";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Button } from "react-native-elements";
 import { useState } from "react";
@@ -116,8 +116,17 @@ export default function App() {
     <ImageBackground
     source={require('./assets/cart.jpg')}
     style={styles.modal}>
-      <View style={styles.appContainer}>
-          <Text style={styles.versionText}>{version }</Text>
+  <View style={styles.appContainer}>
+{/* Version and copright link     */}
+  <View style={styles.topContainer}>
+      <Text style={styles.versionText}>{version}</Text>
+      <View style={styles.copyright}>
+        <TouchableOpacity onPress={() => Linking.openURL('https://portfolio.margottiworld.com/')}>
+          <Text style={styles.linkText}>&#169; margotticode2023</Text>
+        </TouchableOpacity>
+      </View>
+  </View>
+{/* section end */}
       <View style={styles.inputContainer}>
         <TextInput style={styles.heading}>Shopping List</TextInput>
         <View style={styles.buttonContainer}>
