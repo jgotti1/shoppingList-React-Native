@@ -104,17 +104,23 @@ const styles = StyleSheet.create({
   deleteContainer: {
     flex: 1,
     alignItems: "flex-end",
-  
- 
   },
 
   deleteItem: {
     fontWeight: "bold",
     color: "red",
-    fontSize: 35,
+    fontSize: 20,
     marginRight: 18,
-   
   },
+
+  // deleteTextContainer: {
+  // borderWidth: 3,
+  //   borderColor: "red",
+  //   margin: 6,
+  //   borderRadius: 50,
+  //   height: 40,
+
+  // },
 
   button: {
     borderRadius: 10,

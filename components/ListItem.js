@@ -21,7 +21,11 @@ function ListItem({ handleDeleteItem, data }) {
           <Text style={!isChecked ? styles.itemText : styles.itemTextChecked}>{data.text}</Text>
         </Checkbox>
           <View style={styles.deleteContainer}>
-          <Pressable onPress={handleDeleteItem.bind(this, data.key)}><Text style={styles.deleteItem}>-</Text></Pressable>
+          <Pressable onPress={handleDeleteItem.bind(this, data.key)}>
+            <View style={styles.deleteTextContainer}>
+            <Text style={styles.deleteItem}>x</Text>
+            </View>
+          </Pressable>
           </View>
         </View> 
       {/* </Pressable> */}
