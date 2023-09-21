@@ -15,12 +15,12 @@ const styles = StyleSheet.create({
     marginBottom: 5
   },
  
+  // version and copyright styles 
   topContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal:12,
-    // paddingVertical: 10,
   },
 
   versionText: {
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     marginLeft: 5,
   },
 
-
+// End section ***************
 
   inputContainer: {
     backgroundColor:"#c0cfdb",
