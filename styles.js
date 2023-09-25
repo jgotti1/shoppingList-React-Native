@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
   inputModal: {
     flex: 1,
-    flexDirection: "col",
+    // flexDirection: "col",
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#6bb1da",
